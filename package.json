@@ -1,0 +1,28 @@
+{
+  "name": "playlistproject",
+  "version": "1.0.0",
+  "description": "Playlist Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/briebibiano/PlaylistProject.git"
+  },
+  "author": "Brie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/briebibiano/PlaylistProject/issues"
+  },
+  "homepage": "https://github.com/briebibiano/PlaylistProject#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.0",
+    "nodemon": "^2.0.15"
+  }
+}
