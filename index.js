@@ -1,15 +1,21 @@
-require('dotenv').config();
-const express = require('express')
-const conecToDb = require("./database/db")
+require("dotenv").config();
+const express = require("express");
+const conecToDb = require("./database/db");
+const path = require("path");
 
-const app = express()
+const app = express();
+const port = process.env.PORT || 3000;
 
-const port = process.env.PORT || 3000; 
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded());
 
-conecToDb()
+conecToDb();
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+app.get("/", function (req, res) {
+  res.render("index");
+});
 
-app.listen(3000, () => console.log(`Servidor rodando em http://localhost: ${port}`))
+app.listen(3000, () =>
+  console.log(`Servidor rodando em http://localhost: ${port}`)
+);
